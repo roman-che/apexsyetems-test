@@ -26,7 +26,6 @@ public class ApexSystemsTests extends TestBase {
 
         step("menu elements of class toggler are not null ", () -> {
             $("#block-apex-bootstrap-main-navigation").$$(".toggler").shouldBe(sizeGreaterThan(0));
-
         });
     }
 
