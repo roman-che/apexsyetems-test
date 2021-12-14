@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.matchText;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -20,11 +21,14 @@ public class ApexSystemsTests extends TestBase {
         step("open https://www.apexsystems.com/", () ->
                 open("https://www.apexsystems.com/"));
 
-        step("click 'accept cookies'", () ->
-                $("#onetrust-accept-btn-handler").click());
+        step("click 'accept cookies'", () -> {
+            $("#onetrust-accept-btn-handler").shouldBe(visible);
+            $("#onetrust-accept-btn-handler").click();
+        });
 
 
         step("menu elements of class toggler are not null ", () -> {
+            $("#block-apex-bootstrap-main-navigation").shouldBe(visible);
             $("#block-apex-bootstrap-main-navigation").$$(".toggler").shouldBe(sizeGreaterThan(0));
         });
     }
@@ -36,13 +40,19 @@ public class ApexSystemsTests extends TestBase {
         step("open https://www.apexsystems.com/", () ->
                 open("https://www.apexsystems.com/"));
 
-        step("accept cookies", () ->
-                $("#onetrust-accept-btn-handler").click());
+        step("accept cookies", () -> {
+            $("#onetrust-accept-btn-handler").shouldBe(visible);
+            $("#onetrust-accept-btn-handler").click();
 
-        step("click \"What We Do\" menu item ", () ->
-                $("[href='/what-we-do']").click());
+        });
+
+        step("click \"What We Do\" menu item ", () -> {
+                $("[href='/what-we-do']").shouldBe(visible);
+                $("[href='/what-we-do']").click();
+        });
 
         step("footer contains \"Apex Systems is an equal opportunity employer.\" ", () -> {
+            $("#block-eeocstatement").shouldBe(visible);
             $("#onetrust-consent-sdk").scrollTo();
             $("#block-eeocstatement").shouldHave(matchText("Apex Systems is an equal opportunity employer."));
         });
@@ -57,6 +67,7 @@ public class ApexSystemsTests extends TestBase {
                 open("https://www.apexsystems.com/"));
 
         step("Page title should have text 'Apex Systems'", () -> {
+            $("#block-apex-bootstrap-main-navigation").shouldBe(visible);
             String expectedTitle = "Apex Systems";
             String actualTitle = title();
             assertThat(actualTitle).isEqualTo(expectedTitle);
@@ -71,6 +82,7 @@ public class ApexSystemsTests extends TestBase {
                 open("https://www.apexsystems.com/"));
 
         step("Console logs should not contain text 'SEVERE'", () -> {
+            $("#block-apex-bootstrap-main-navigation").shouldBe(visible);
             String consoleLogs = DriverUtils.getConsoleLogs();
             String errorText = "SEVERE";
             assertThat(consoleLogs).doesNotContain(errorText);
