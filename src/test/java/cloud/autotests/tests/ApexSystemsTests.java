@@ -2,8 +2,7 @@ package cloud.autotests.tests;
 
 import cloud.autotests.helpers.DriverUtils;
 import io.qameta.allure.Description;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.matchText;
@@ -14,8 +13,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class ApexSystemsTests extends TestBase {
+
     @Test
-    @Description("Menu has at least one toggler element")
+    @Disabled("Test code for further test development")
+    @Description("at least one toggler element in menu")
     @DisplayName("Menu has at least one toggler element")
     void menuTogglerElementsTest() {
         step("open https://www.apexsystems.com/", () ->
@@ -34,7 +35,7 @@ public class ApexSystemsTests extends TestBase {
     }
 
     @Test
-    @Description("\"What We do\" footer contains text")
+    @Description(" text assertion in footer")
     @DisplayName("\"What We do\" footer contains text")
     void clickWhatWeDoTest() {
         step("open https://www.apexsystems.com/", () ->
@@ -59,7 +60,7 @@ public class ApexSystemsTests extends TestBase {
     }
 
     @Test
-    @Description("Page title should have header text")
+    @Description("title text assertion")
     @DisplayName("Page title should have header text")
     void titleTest() {
         step("Open url 'https://www.apexsystems.com/'", () ->
@@ -74,7 +75,7 @@ public class ApexSystemsTests extends TestBase {
     }
 
     @Test
-    @Description("Page console log should not have errors")
+    @Description("No errors in console log assertion")
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
         step("Open url 'https://www.apexsystems.com/'", () ->
