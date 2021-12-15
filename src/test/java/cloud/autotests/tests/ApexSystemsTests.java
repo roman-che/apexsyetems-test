@@ -52,8 +52,7 @@ public class ApexSystemsTests extends TestBase {
         });
 
         step("footer contains \"Apex Systems is an equal opportunity employer.\" ", () -> {
-           // $("#block-eeocstatement").shouldBe(visible);
-            $("#onetrust-consent-sdk").scrollTo();
+            $("#block-eeocstatement").scrollTo();
             $("#block-eeocstatement").shouldHave(matchText("Apex Systems is an equal opportunity employer."));
         });
 
