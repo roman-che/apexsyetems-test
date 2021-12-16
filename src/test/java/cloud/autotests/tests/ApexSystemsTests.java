@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ApexSystemsTests extends TestBase {
 
     @Test
-    @Disabled("Test code for further test development")
+//    @Disabled("Test code for further test development")
     @Description("at least one toggler element in menu")
     @DisplayName("Menu has at least one toggler element")
     void menuTogglerElementsTest() {
