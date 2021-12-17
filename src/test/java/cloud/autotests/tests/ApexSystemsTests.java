@@ -38,33 +38,23 @@ public class ApexSystemsTests extends TestBase {
     @Description(" text assertion in footer")
     @DisplayName("\"What We do\" footer contains text")
     void clickWhatWeDoTest() {
-      /*  step("open https://www.apexsystems.com/", () ->
+        step("open https://www.apexsystems.com/", () ->
                 open("https://www.apexsystems.com/"));
 
         step("accept cookies", () -> {
             $("#onetrust-accept-btn-handler").shouldBe(visible);
             $("#onetrust-accept-btn-handler").click();
-
         });
 
         step("click \"What We Do\" menu item ", () -> {
-                $("[href='/what-we-do']").shouldBe(visible);
-                $("[href='/what-we-do']").click();
-        });*/
-
-        step("open https://www.apexsystems.com/what-we-do", () ->
-                open("https://www.apexsystems.com/"));
-
-        step("accept cookies", () -> {
-            $("#onetrust-accept-btn-handler").shouldBe(visible);
-            $("#onetrust-accept-btn-handler").click();
-
+            $("[href='/what-we-do']").shouldBe(visible);
+            $("[href='/what-we-do']").click();
         });
+
         step("footer contains \"Apex Systems is an equal opportunity employer.\" ", () -> {
             $("#block-eeocstatement").scrollTo();
             $("#block-eeocstatement").shouldHave(matchText("Apex Systems is an equal opportunity employer."));
         });
-
     }
 
     @Test
