@@ -3,6 +3,7 @@ package cloud.autotests.helpers;
 import cloud.autotests.config.Project;
 import com.codeborne.selenide.Config;
 import com.codeborne.selenide.Configuration;
+import org.junit.jupiter.engine.config.CachingJupiterConfiguration;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -15,6 +16,7 @@ public class DriverSettings {
         Configuration.browser = Project.config.browser();
         Configuration.browserVersion = Project.config.browserVersion();
         Configuration.browserSize = Project.config.browserSize();
+        Configuration.timeout=10000;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         ChromeOptions chromeOptions = new ChromeOptions();
