@@ -1,9 +1,7 @@
 package cloud.autotests.helpers;
 
 import cloud.autotests.config.Project;
-import com.codeborne.selenide.Config;
 import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.engine.config.CachingJupiterConfiguration;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
