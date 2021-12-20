@@ -27,7 +27,6 @@ public class ApexSystemsTests extends TestBase {
             $("#onetrust-accept-btn-handler").click();
         });
 
-
         step("menu elements of class toggler are not null ", () -> {
             $("#block-apex-bootstrap-main-navigation").shouldBe(visible);
             $("#block-apex-bootstrap-main-navigation").$$(".toggler").shouldBe(sizeGreaterThan(0));
@@ -86,4 +85,30 @@ public class ApexSystemsTests extends TestBase {
             assertThat(consoleLogs).doesNotContain(errorText);
         });
     }
+
+    @Test
+    @Description("console log has no warnings assertion")
+    @DisplayName("Page console log should have no warnings")
+    void consoleShouldNotHaveWarnings() {
+        step("Open url 'https://www.apexsystems.com/'", () ->
+                open("https://www.apexsystems.com/"));
+
+        step("Console logs should not contain text 'WARNING'", () -> {
+            $("#block-apex-bootstrap-main-navigation").shouldBe(visible);
+            String consoleLogs = DriverUtils.getConsoleLogs();
+            String warningText = "[WARNING]";
+            assertThat(consoleLogs).doesNotContain(warningText);
+        });
+    }
+
+
+    @Test
+    @Disabled("Test code for further test development")
+    @Description("skipped test")
+    @DisplayName("skipped test")
+    void skippedTest() {
+        //add code here
+    }
+
+
 }
