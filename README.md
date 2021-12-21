@@ -1,6 +1,7 @@
-# Test automation project for [Apex syetems](https://www.apexsystems.com/) website
+<h2 align="center">Test automation project for <a href="https://www.apexsystems.com/">Apex syetems</a> website</h1>
 
-<p  align="center"
+### Technology stack
+<p  align="center">
 <img width="5%" title="IntelliJ IDEA" src="img/logo/IDEA-logo.svg">
 <img width="5%" title="Java" src="img/logo/java-logo.svg">
 <img width="5%" title="Selenide" src="img/logo/selenide-logo.svg">
