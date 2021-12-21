@@ -131,17 +131,20 @@ Each test in the report have a video attachment. The example of such video is pr
 
 Allure TestOps is used to store all the automated and manual test cases, build launches and results as well as statistics and reports.
 
-Dashboard with launch statistics timeline.
+
+Dashboard with launch statistics timeline
 
 <p align="center">
   <img src="img/screenshots/allureTestopsScreenshot.png">
 </p>
 
-List of tests with description and sucsess history (some manual tests added below).
+
+List of tests with description and sucsess history (some manual tests added below)
 
 <p align="center">
   <img src="img/screenshots/allureTestopsScreenshot_suites.png">
 </p>
+
 
 List of launches
 
