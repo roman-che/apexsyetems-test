@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ApexSystemsTests extends TestBase {
 
     @Test
-//    @Disabled("Test code for further test development")
+    @Tags({@Tag("all_tests"), @Tag("page_tests")})
     @Description("at least one toggler element in menu")
     @DisplayName("Menu has at least one toggler element")
     void menuTogglerElementsTest() {
@@ -34,6 +34,7 @@ public class ApexSystemsTests extends TestBase {
     }
 
     @Test
+    @Tags({@Tag("all_tests"), @Tag("page_tests")})
     @Description(" text assertion in footer")
     @DisplayName("\"What We do\" footer contains text")
     void clickWhatWeDoTest() {
@@ -57,6 +58,7 @@ public class ApexSystemsTests extends TestBase {
     }
 
     @Test
+    @Tags({@Tag("all_tests"), @Tag("page_tests")})
     @Description("title text assertion")
     @DisplayName("Page title should have header text")
     void titleTest() {
@@ -72,6 +74,7 @@ public class ApexSystemsTests extends TestBase {
     }
 
     @Test
+    @Tags({@Tag("all_tests"), @Tag("console_tests")})
     @Description("No errors in console log assertion")
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
@@ -87,6 +90,7 @@ public class ApexSystemsTests extends TestBase {
     }
 
     @Test
+    @Tags({@Tag("all_tests"), @Tag("console_tests")})
     @Description("console log has no warnings assertion")
     @DisplayName("Page console log should have no warnings")
     void consoleShouldNotHaveWarnings() {
@@ -101,14 +105,12 @@ public class ApexSystemsTests extends TestBase {
         });
     }
 
-
     @Test
+    @Tags({@Tag("all_tests"), @Tag("page_tests")})
     @Disabled("Test code for further test development")
     @Description("skipped test")
     @DisplayName("skipped test")
     void skippedTest() {
         //add code here
     }
-
-
 }
