@@ -16,7 +16,7 @@
 <img width="5%" title="Telegram" src="img/logo/Telegram.svg">
 </p>
 
-### The list of testsm grouped by tags
+### The list of tests grouped by tags
 
 <details>
 <summary>website - page tests:</summary>
@@ -45,7 +45,7 @@ ___
 ```bash
 gradle clean test
 ```
-### Running tests in parametrized build:
+### Running tests in parameterized build:
 
 ```bash
 gradle clean
@@ -95,7 +95,7 @@ The test results can be observed in:
 
 ### [Jenkins](https://jenkins.autotests.cloud/job/09-roman-che-apexsystems-test)
 
-To the running the tests in Jenkins, [the parameters described above](#running-tests-in-parametrized-build) are required.
+To run the tests in Jenkins, [the parameters described above](#running-tests-in-parametrized-build) are required.
 
 With the required parameters set in the "Build with parameters" section, the build will run after clicking the "Build" button.
 
@@ -103,7 +103,7 @@ With the required parameters set in the "Build with parameters" section, the bui
   <img src="img/screenshots/jenkinsBuildParameters.png">
 </p>
 
-Once the build finished, `Allure report` is available by clicking the corresponding link.
+Once the build is finished, the `Allure report` is available by clicking the corresponding link.
 
 <p align="center">
   <img src="img/screenshots/jenkinsScreenshot.png">
@@ -111,7 +111,7 @@ Once the build finished, `Allure report` is available by clicking the correspond
 
 ### Allure Report
 
-The image below depicts the Allure report with the list of tests. Each test include predefined tags, steps in "Test body" section and added screenshot, page source, console logs and video as attachments.
+The image below depicts the Allure report with the list of tests. Each test includes predefined tags, steps in the "Test body" section and added screenshot, page source, console logs and video as attachments.
 
 <p align="center">
   <img src="img/screenshots/allureScreenshot.png">
@@ -120,7 +120,7 @@ The image below depicts the Allure report with the list of tests. Each test incl
 
 
 ### Video of a running test
-Each test in the report have a video attachment. The example of such video is presented below.
+Each test in the report has a video attachment. One of these videos is presented below.
 <p align="center">
   <img src="img/gif/videoTest.gif">
 </p>
@@ -139,7 +139,7 @@ Dashboard with launch statistics timeline
 </p>
 
 
-List of tests with description and sucsess history (some manual tests added below)
+List of tests with description and succsess history (some manual tests added below)
 
 <p align="center">
   <img src="img/screenshots/allureTestopsScreenshot_suites.png">
@@ -163,7 +163,7 @@ The project implements Jira integration, allowing to add issues and assign colla
 ## Messenger notification
 
 When the build is done, the report is sent by the bot in the Telegram messenger.
-The framework used also support notifications via Email, Slack, Skype and Mattermost.
+The framework also supports notifications via Email, Slack, Skype and Mattermost.
 
 <p align="center">
   <img src="img/screenshots/telegramScreenshot.png">
