@@ -1,6 +1,6 @@
-package cloud.autotests.helpers;
+package ru.inventorium.qa.helpers;
 
-import cloud.autotests.config.Project;
+import ru.inventorium.qa.config.Project;
 import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;

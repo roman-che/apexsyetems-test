@@ -1,4 +1,4 @@
-package cloud.autotests.config;
+package ru.inventorium.qa.config;
 
 import org.aeonbits.owner.ConfigFactory;
 

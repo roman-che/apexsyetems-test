@@ -1,9 +1,7 @@
-package cloud.autotests.tests;
+package ru.inventorium.qa.tests;
 
-import cloud.autotests.config.Project;
-import cloud.autotests.helpers.AllureAttachments;
-import cloud.autotests.helpers.DriverSettings;
-import cloud.autotests.helpers.DriverUtils;
+import ru.inventorium.qa.helpers.AllureAttachments;
+import ru.inventorium.qa.helpers.DriverSettings;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.junit5.AllureJunit5;
@@ -11,10 +9,14 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.extension.ExtendWith;
+import ru.inventorium.qa.pages.MainPage;
 
 
 @ExtendWith({AllureJunit5.class})
 public class TestBase {
+
+    MainPage mainPage = new MainPage();
+
     @BeforeAll
     static void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
