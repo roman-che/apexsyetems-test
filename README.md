@@ -16,7 +16,7 @@
 <img width="5%" title="Telegram" src="img/logo/Telegram.svg">
 </p>
 
-### The list of testsm grouped by tags
+### The list of tests grouped by tags
 
 <details>
 <summary>website - page tests:</summary>
@@ -38,14 +38,14 @@
 
 ___
 
-## Run tests from terminal locally
+## Running tests by local terminal
 
 ### Running tests with declared remote properties:
 
 ```bash
 gradle clean test
 ```
-### Running tests in parametrized build:
+### Running tests in parameterized build:
 
 ```bash
 gradle clean
@@ -65,11 +65,106 @@ test
 <summary>Parameters description</summary>
 
 + tag — the list of tests, grouped by a tag parameter
-+ environment — environment that runs the build (`prod` — production (defalut value) or `dev` — staging for development)
-+ browser — browser to run tests in (`chrome` by default, `opera`, `firefox`, `safari`)
-+ browserVersion — version off the selected browser (`91.0` by default)
-+ URL — address of build running remote browser server (`selenoid.autotests.cloud` by default)
++ ENVIRONMENT — environment that runs the build (`prod` — production (defalut value) or `dev` — staging for development)
++ BROWSER — browser to run tests in (`chrome` by default, `opera`, `firefox`, `safari`)
++ BROWSER_VERSION — version off the selected browser (`91.0` by default)
++ BROWSER_SIZE — browser window size (`1920x1080` by default)
++ BROWSER_MOBILE — phone model emulation (`empty` by default, `iPhone X`, `iPad Pro`, `Nexus 7`)
++ REMOTE_DRIVER_URL — address of build running remote browser server (`selenoid.autotests.cloud` by default)
 + videoStorage — address of video storage server (`selenoid.autotests.cloud/video/` by default)
 + threads — number of threads to run the tests (`5` by default)
++ ALLURE_NOTIFICATIONS_VERSION — version of allure notifications software to send the report in external messengers and services (`2.2.3` by default)
 </details>
 
+
+### Serve report:
+
+```bash
+allure serve build/allure-results
+```
+
+___
+
+## Result analysis
+
+The test results can be observed in:
++ [Jenkins](#jenkins)
++ [Allure Report](#allure-report)
++ [Allure TestOps](#allure-testOps)
++ [Jira](#jira)
+
+### [Jenkins](https://jenkins.autotests.cloud/job/09-roman-che-apexsystems-test)
+
+To run the tests in Jenkins, [the parameters described above](#running-tests-in-parametrized-build) are required.
+
+With the required parameters set in the "Build with parameters" section, the build will run after clicking the "Build" button.
+
+<p align="center">
+  <img src="img/screenshots/jenkinsBuildParameters.png">
+</p>
+
+Once the build is finished, the `Allure report` is available by clicking the corresponding link.
+
+<p align="center">
+  <img src="img/screenshots/jenkinsScreenshot.png">
+</p>
+
+### Allure Report
+
+The image below depicts the Allure report with the list of tests. Each test includes predefined tags, steps in the "Test body" section and added screenshot, page source, console logs and video as attachments.
+
+<p align="center">
+  <img src="img/screenshots/allureScreenshot.png">
+</p>
+
+
+
+### Video of a running test
+Each test in the report has a video attachment. One of these videos is presented below.
+<p align="center">
+  <img src="img/gif/videoTest.gif">
+</p>
+
+
+
+### Allure TestOps
+
+Allure TestOps is used to store all the automated and manual test cases, build launches and results as well as statistics and reports.
+
+
+Dashboard with launch statistics timeline
+
+<p align="center">
+  <img src="img/screenshots/allureTestopsScreenshot.png">
+</p>
+
+
+List of tests with description and succsess history (some manual tests added below)
+
+<p align="center">
+  <img src="img/screenshots/allureTestopsScreenshot_suites.png">
+</p>
+
+
+List of launches
+
+<p align="center">
+  <img src="img/screenshots/allureTestopsScreenshot_launchesList.png">
+</p>
+
+## Jira
+
+The project implements Jira integration, allowing to add issues and assign collaborators
+
+<p align="center">
+  <img src="img/screenshots/jiraScreenshot.png">
+</p>
+
+## Messenger notification
+
+When the build is done, the report is sent by the bot in the Telegram messenger.
+The framework also supports notifications via Email, Slack, Skype and Mattermost.
+
+<p align="center">
+  <img src="img/screenshots/telegramScreenshot.png">
+</p>
