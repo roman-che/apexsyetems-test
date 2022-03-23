@@ -8,6 +8,7 @@ import org.aeonbits.owner.Config;
         "classpath:config/local.properties",
         "classpath:config/remote.properties"
 })
+
 public interface ProjectConfig extends Config {
 
     @DefaultValue("chrome")

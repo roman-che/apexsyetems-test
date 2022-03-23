@@ -1,6 +1,5 @@
 package ru.inventorium.qa.tests;
 
-import com.codeborne.selenide.Configuration;
 import ru.inventorium.qa.helpers.AllureAttachments;
 import ru.inventorium.qa.helpers.DriverSettings;
 import com.codeborne.selenide.Selenide;
@@ -22,13 +21,11 @@ public class TestBase {
     static void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         DriverSettings.configure();
-        Configuration.startMaximized = true;
 
     }
 
     @AfterEach
     public void addAttachments() {
-
         AllureAttachments.screenshotAs("Last screenshot");
         AllureAttachments.pageSource();
         AllureAttachments.browserConsoleLogs();
