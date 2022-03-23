@@ -1,7 +1,6 @@
 package ru.inventorium.qa.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.impl.SelenideElementListIterator;
 import io.qameta.allure.Step;
 import ru.inventorium.qa.helpers.DriverUtils;
 
