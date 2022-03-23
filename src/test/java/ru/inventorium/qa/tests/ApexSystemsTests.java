@@ -1,13 +1,15 @@
 package ru.inventorium.qa.tests;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Step;
 import org.junit.jupiter.api.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class ApexSystemsTests extends TestBase {
 
     @BeforeEach
-    public void openPage(){
+    @Step("Open url \"https://www.apexsystems.com/\"")
+    public void openPage() {
         mainPage.openMainPage();
     }
 
@@ -16,9 +18,8 @@ public class ApexSystemsTests extends TestBase {
     @Description("At least one toggler element in menu")
     @DisplayName("Menu has at least one toggler element")
     void menuTogglerElementsTest() {
-                //mainPage.openMainPage();
-                mainPage.clickAcceptCookies();
-                mainPage.togglerMenuElementsArePresent();
+        mainPage.clickAcceptCookies();
+        mainPage.togglerMenuElementsArePresent();
     }
 
     @Test
@@ -26,10 +27,9 @@ public class ApexSystemsTests extends TestBase {
     @Description("Text assertion in footer")
     @DisplayName("\"What We do\" footer contains text")
     void clickWhatWeDoTest() {
-                //mainPage.openMainPage();
-                mainPage.clickAcceptCookies();
-                mainPage.clickWhatWeDoMenuItem();
-                mainPage.assertFooterText();
+        mainPage.clickAcceptCookies();
+        mainPage.clickWhatWeDoMenuItem();
+        mainPage.assertFooterText();
     }
 
     @Test
@@ -37,8 +37,7 @@ public class ApexSystemsTests extends TestBase {
     @Description("Title text assertion")
     @DisplayName("Page title should have text 'Apex Systems'")
     void titleTest() {
-                //mainPage.openMainPage();
-                mainPage.assertTitleText(title());
+        mainPage.assertTitleText(title());
     }
 
     @Test
@@ -46,8 +45,7 @@ public class ApexSystemsTests extends TestBase {
     @Description("No errors in console log assertion")
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
-                //mainPage.openMainPage();
-                mainPage.assertConsoleHaveNoErrors();
+        mainPage.assertConsoleHaveNoErrors();
     }
 
     @Test
@@ -55,8 +53,7 @@ public class ApexSystemsTests extends TestBase {
     @Description("Console log has no warnings assertion")
     @DisplayName("Page console log should have no warnings")
     void consoleShouldNotHaveWarnings() {
-                //mainPage.openMainPage();
-                mainPage.assertConsoleHaveNoWarnings();
+        mainPage.assertConsoleHaveNoWarnings();
     }
 
     @Test
@@ -65,6 +62,6 @@ public class ApexSystemsTests extends TestBase {
     @Description("Skipped test")
     @DisplayName("Skipped test")
     void skippedTest() {
-        //Skipped test code here
+        //Sample skipped test with no code
     }
 }

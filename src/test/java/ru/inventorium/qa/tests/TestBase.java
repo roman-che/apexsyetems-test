@@ -11,7 +11,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.extension.ExtendWith;
 import ru.inventorium.qa.pages.MainPage;
 
-
 @ExtendWith({AllureJunit5.class})
 public class TestBase {
 
@@ -21,7 +20,6 @@ public class TestBase {
     static void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         DriverSettings.configure();
-
     }
 
     @AfterEach
@@ -33,4 +31,5 @@ public class TestBase {
 
         Selenide.closeWebDriver();
     }
+
 }
