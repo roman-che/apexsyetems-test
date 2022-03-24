@@ -139,7 +139,7 @@ Dashboard with launch statistics timeline
 </p>
 
 
-List of tests with description and succsess history (some manual tests added below)
+List of tests with description and success history (some manual tests added below)
 
 <p align="center">
   <img src="img/screenshots/allureTestopsScreenshot_suites.png">
