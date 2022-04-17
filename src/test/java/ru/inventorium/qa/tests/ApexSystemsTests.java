@@ -8,7 +8,6 @@ import static com.codeborne.selenide.Selenide.*;
 public class ApexSystemsTests extends TestBase {
 
     @BeforeEach
-    @Step("Open url \"https://www.apexsystems.com/\"")
     public void openPage() {
         mainPage.openMainPage();
     }
