@@ -27,8 +27,9 @@ public class MainPage {
 
     //actions
     @Step("Open url \"https://www.apexsystems.com/\"")
-    public void openMainPage() {
+    public MainPage openMainPage() {
         open("https://www.apexsystems.com/");
+        return this;
     }
 
     @Step("click \"accept cookies\"")

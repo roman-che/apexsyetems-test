@@ -29,7 +29,7 @@ public class TestBase {
         AllureAttachments.browserConsoleLogs();
         AllureAttachments.addVideo();
 
-        Selenide.closeWebDriver();
+        //Selenide.closeWebDriver();
     }
 
 }
