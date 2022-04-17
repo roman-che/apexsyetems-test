@@ -7,17 +7,12 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class ApexSystemsTests extends TestBase {
 
-    @BeforeEach
-    @Step("Open url \"https://www.apexsystems.com/\"")
-    public void openPage() {
-        mainPage.openMainPage();
-    }
-
     @Test
     @Tags({@Tag("all_tests"), @Tag("page_tests")})
     @Description("At least one toggler element in menu")
     @DisplayName("Menu has at least one toggler element")
     void menuTogglerElementsTest() {
+        mainPage.openMainPage();
         mainPage.clickAcceptCookies();
         mainPage.togglerMenuElementsArePresent();
     }
@@ -27,6 +22,7 @@ public class ApexSystemsTests extends TestBase {
     @Description("Text assertion in footer")
     @DisplayName("\"What We do\" footer contains text")
     void clickWhatWeDoTest() {
+        mainPage.openMainPage();
         mainPage.clickAcceptCookies();
         mainPage.clickWhatWeDoMenuItem();
         mainPage.assertFooterText();
@@ -37,6 +33,7 @@ public class ApexSystemsTests extends TestBase {
     @Description("Title text assertion")
     @DisplayName("Page title should have text 'Apex Systems'")
     void titleTest() {
+        mainPage.openMainPage();
         mainPage.assertTitleText(title());
     }
 
@@ -45,6 +42,7 @@ public class ApexSystemsTests extends TestBase {
     @Description("No errors in console log assertion")
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
+        mainPage.openMainPage();
         mainPage.assertConsoleHaveNoErrors();
     }
 
@@ -53,6 +51,7 @@ public class ApexSystemsTests extends TestBase {
     @Description("Console log has no warnings assertion")
     @DisplayName("Page console log should have no warnings")
     void consoleShouldNotHaveWarnings() {
+        mainPage.openMainPage();
         mainPage.assertConsoleHaveNoWarnings();
     }
 
