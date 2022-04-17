@@ -28,6 +28,7 @@ public class TestBase {
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
 
+        Configuration.browserSize="1920x1080";
         Configuration.startMaximized = true;
         Configuration.remote = format("https://%s:%s@%s",Project.config.login(),Project.config.password(),Project.config.remoteDriverUrl());
         Configuration.browserCapabilities = capabilities;
