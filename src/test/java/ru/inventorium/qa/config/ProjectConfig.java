@@ -11,20 +11,13 @@ import org.aeonbits.owner.Config;
 
 public interface ProjectConfig extends Config {
 
-    @DefaultValue("chrome")
-    String browser();
-
-    @DefaultValue("96.0")
-    String browserVersion();
-
-    @DefaultValue("1920x1080")
-    String browserSize();
-
-    String browserMobileView();
-
+    @DefaultValue("selenoid.autotests.cloud/wd/hub/")
     String remoteDriverUrl();
 
+    @DefaultValue("https://selenoid.autotests.cloud/video/")
     String videoStorage();
+
     String login();
+
     String password();
 }
